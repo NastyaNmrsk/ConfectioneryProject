@@ -30,12 +30,9 @@ public class Main extends Object {
         order.add(puffpastry);
         order.add(puffpastry1);
 
-        Meal[] meals = new Meal[]{cake, drink, puffpastry};
 
-//        MyIterator iterator = new ArrayIterator(meals);
-//        while (iterator.hasNext()) {
-//            System.out.println(iterator.next());
-//        }
+
+
 //
 //        iterator.reset();
 //
@@ -58,8 +55,8 @@ public class Main extends Object {
 //        OrderSorter.sort(order, new SortByPriceDesc());
 //        System.out.println(order);
 
-//        iterator.reset();
-//        double total = Server.calculateTotalPrice(iterator);
-//        System.out.println("Total price: " + total);
+
+        double total = Server.calculateTotalPrice(order);
+        System.out.println("Total price: " + total);
     }
 }
