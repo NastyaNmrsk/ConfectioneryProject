@@ -6,7 +6,7 @@ import java.util.Objects;
 
 public class PuffPastry extends Meal {
     private String kind;
-    private String topping;
+    // enum private String topping;
 
     public PuffPastry() {
 
