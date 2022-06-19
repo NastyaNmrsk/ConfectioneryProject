@@ -52,14 +52,13 @@ public class Meal implements Comparable<Meal> {
 
     @Override
     public int hashCode() {
-        System.out.println("hashCode");
         return Objects.hash(price);
     }
 
 
     @Override
     public String toString() {
-        return "price = " + price + " calorie = " + calorie;
+        return "price = " + price + ", calorie = " + calorie;
     }
 
     @Override
