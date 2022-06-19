@@ -22,7 +22,6 @@ public class Main extends Object {
         order.add(drink);
         order.add(drink1);
         order.add(puffpastry);
-        order.add(puffpastry1);
 
         Meal[] meals = new Meal[]{cake, drink, puffpastry};
 
