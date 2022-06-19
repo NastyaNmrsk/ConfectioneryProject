@@ -1,7 +1,6 @@
 package by.itstep.nmrsk.javastages.stage20.model.entity.iteratorpattern;
 
 import by.itstep.nmrsk.javastages.stage20.model.entity.abstracts.Meal;
-import by.itstep.nmrsk.javastages.stage20.model.entity.container.FixedOrder;
 
 public class FixedOrderIterator implements MyIterator {
     private FixedOrder order;

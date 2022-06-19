@@ -3,7 +3,6 @@ package model.logic;
 import by.itstep.nmrsk.javastages.stage20.model.entity.Cake;
 import by.itstep.nmrsk.javastages.stage20.model.entity.Drink;
 import by.itstep.nmrsk.javastages.stage20.model.entity.PuffPastry;
-import by.itstep.nmrsk.javastages.stage20.model.entity.container.DynamicOrder;
 import by.itstep.nmrsk.javastages.stage20.model.logic.Server;
 import org.junit.Test;
 

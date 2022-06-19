@@ -4,15 +4,9 @@ import by.itstep.nmrsk.javastages.stage20.model.entity.Cake;
 import by.itstep.nmrsk.javastages.stage20.model.entity.Drink;
 import by.itstep.nmrsk.javastages.stage20.model.entity.PuffPastry;
 import by.itstep.nmrsk.javastages.stage20.model.entity.abstracts.Meal;
-import by.itstep.nmrsk.javastages.stage20.model.entity.container.DynamicOrder;
 import by.itstep.nmrsk.javastages.stage20.model.entity.container.Order;
-import by.itstep.nmrsk.javastages.stage20.model.entity.iteratorpattern.ArrayIterator;
-import by.itstep.nmrsk.javastages.stage20.model.entity.iteratorpattern.Iterable;
-import by.itstep.nmrsk.javastages.stage20.model.entity.iteratorpattern.MyIterator;
 import by.itstep.nmrsk.javastages.stage20.model.logic.OrderSorter;
-import by.itstep.nmrsk.javastages.stage20.model.logic.Server;
 import by.itstep.nmrsk.javastages.stage20.model.logic.sortstrategy.SortByPriceAsc;
-import by.itstep.nmrsk.javastages.stage20.model.logic.sortstrategy.SortByPriceDesc;
 
 public class Main extends Object {
     public static void main(String[] args) {
@@ -22,7 +16,7 @@ public class Main extends Object {
         Drink drink1 = new Drink("Tea", "Lemon", 4.5, 28.0);
         PuffPastry puffpastry = new PuffPastry("Croissant", "Chocolate", 6.0, 389.9);
         PuffPastry puffpastry1 = new PuffPastry("Croissant", "Salmon", 10.0, 339.7);
-        DynamicOrder order = new DynamicOrder();
+        Order order = new Order();
         order.add(cake);
         order.add(cake1);
         order.add(drink);

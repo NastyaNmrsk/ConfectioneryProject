@@ -1,8 +1,6 @@
 package by.itstep.nmrsk.javastages.stage20.model.logic;
 
 import by.itstep.nmrsk.javastages.stage20.model.entity.abstracts.Meal;
-import by.itstep.nmrsk.javastages.stage20.model.entity.container.DynamicOrder;
-import by.itstep.nmrsk.javastages.stage20.model.entity.container.Order;
 import by.itstep.nmrsk.javastages.stage20.model.logic.sortstrategy.MealSortable;
 
 public class OrderSorter {

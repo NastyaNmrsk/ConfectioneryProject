@@ -1,5 +1,7 @@
 package by.itstep.nmrsk.javastages.stage20.model.entity.abstracts;
 
+import by.itstep.nmrsk.javastages.stage20.model.exception.MealPriceWrongException;
+
 import java.util.Objects;
 
 public class Meal implements Comparable<Meal> {
@@ -14,14 +16,19 @@ public class Meal implements Comparable<Meal> {
         this.price = price;
         this.calorie = calorie;
     }
-
+    public Meal(Meal meal) {
+        price = meal.price;
+        calorie = meal.calorie;
+    }
     public double getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(double price) throws MealPriceWrongException{
         if (price > 0) {
             this.price = price;
+        }else {
+            throw new MealPriceWrongException();
         }
     }
 
