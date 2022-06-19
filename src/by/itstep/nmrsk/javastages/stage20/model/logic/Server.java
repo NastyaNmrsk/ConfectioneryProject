@@ -1,15 +1,14 @@
 package by.itstep.nmrsk.javastages.stage20.model.logic;
 
-import by.itstep.nmrsk.javastages.stage20.model.entity.container.Order;
-import by.itstep.nmrsk.javastages.stage20.model.entity.iteratorpattern.Iterable;
-import by.itstep.nmrsk.javastages.stage20.model.entity.iteratorpattern.MyIterator;
+import by.itstep.nmrsk.javastages.stage20.model.entity.abstracts.Meal;
+import java.util.Iterator;
 
 public class Server {
     private Server() {
     }
 
-    public static double calculateTotalPrice(Iterable iterable) {
-        MyIterator iterator = iterable.getIterator();
+    public static double calculateTotalPrice(Iterable<Meal> iterable) {
+        Iterator<Meal> iterator = iterable.iterator();
 
         double total = 0;
 

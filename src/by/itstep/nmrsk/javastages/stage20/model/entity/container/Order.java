@@ -3,9 +3,10 @@ package by.itstep.nmrsk.javastages.stage20.model.entity.container;
 import by.itstep.nmrsk.javastages.stage20.model.entity.abstracts.Meal;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
-public class Order {
+public class Order implements Iterable<Meal>{
     private List<Meal> meals;
 
     public Order() {
@@ -47,5 +48,10 @@ public class Order {
 
         }
         return builder + "";
+    }
+
+    @Override
+    public Iterator<Meal> iterator() {
+        return meals.iterator();
     }
 }
