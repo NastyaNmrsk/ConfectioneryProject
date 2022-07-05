@@ -4,23 +4,21 @@ import by.itstep.nemarskayaanastasiya.examstage.model.entity.Cake;
 import by.itstep.nemarskayaanastasiya.examstage.model.entity.abstracts.Meal;
 import by.itstep.nemarskayaanastasiya.examstage.model.entity.container.Order;
 import by.itstep.nemarskayaanastasiya.examstage.model.logic.Server;
-import by.itstep.nemarskayaanastasiya.examstage.util.ByteStreamBuilder;
-import by.itstep.nemarskayaanastasiya.examstage.util.CharStreamBuilder;
-import by.itstep.nemarskayaanastasiya.examstage.util.HardcodeOrderBuilder;
-import by.itstep.nemarskayaanastasiya.examstage.util.RandomOrderBuilder;
 import by.itstep.nemarskayaanastasiya.examstage.util.exceptions.OrderFileNotFoundException;
-import by.itstep.nemarskayaanastasiya.examstage.util.serialization.OrderSerializator;
+
 
 import java.io.IOException;
 
 
 public class Main extends Object {
     public static void main(String[] args) throws OrderFileNotFoundException, IOException {
+        ControllerSimpleFactory.ControllerType type = ControllerSimpleFactory.ControllerType.FIRST;
+        AbstractController controller = ControllerSimpleFactory.getController(type);
+        controller.justDoIt();
 //        Meal meal = new Cake("Tor", "Lime",10);
 
 //        Order order = HardcodeOrderBuilder.createOrder();
-        int type = 0;
-        Order order = SimpleOrderFactory.getFactory().create(type);
+
 
 //        OrderSerializator.write(order);
 //        System.out.println(OrderSerializator.read());
@@ -34,8 +32,6 @@ public class Main extends Object {
 //        builder.saveOrder(order);
 //        byteStreamBuilder.saveOrder(order);
 //        Order order = ByteStreamBuilder.createOrder();
-        System.out.println(order);
-        double total = Server.calculateTotalPrice(order);
-        System.out.println("Total price: " + total);
+
     }
 }
