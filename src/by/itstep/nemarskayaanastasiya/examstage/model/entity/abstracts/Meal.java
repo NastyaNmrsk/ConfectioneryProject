@@ -8,20 +8,20 @@ import java.util.Objects;
 public class Meal implements Comparable<Meal>, Serializable {
     private static final long serialVersionUID=1L;
     private transient double price;
-//    private double calorie;
+    private double calorie;
 
     public Meal() {
 
     }
 
-    public Meal(double price/*, double calorie*/) {
+    public Meal(double price, double calorie) {
         this.price = price;
-//        this.calorie = calorie;
+        this.calorie = calorie;
     }
 
     public Meal(Meal meal) {
         price = meal.price;
-//        calorie = meal.calorie;
+        calorie = meal.calorie;
     }
 
     public double getPrice() {
@@ -36,22 +36,22 @@ public class Meal implements Comparable<Meal>, Serializable {
         }
     }
 
-//    public double getCalorie() {
-//        return calorie;
-//    }
+    public double getCalorie() {
+        return calorie;
+    }
 
-//    public void setCalorie(double calorie) {
-//        if (calorie > 0) {
-//            this.calorie = calorie;
-//        }
-//    }
+    public void setCalorie(double calorie) {
+        if (calorie > 0) {
+            this.calorie = calorie;
+        }
+    }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Meal)) return false;
         Meal meal = (Meal) o;
-        return Double.compare(meal.price, price) == 0 /*&& Double.compare(meal.calorie, calorie) == 0*/;
+        return Double.compare(meal.price, price) == 0 && Double.compare(meal.calorie, calorie) == 0;
     }
 
     @Override
@@ -62,7 +62,7 @@ public class Meal implements Comparable<Meal>, Serializable {
 
     @Override
     public String toString() {
-        return "price = " + price /*+ ", calorie = " + calorie*/;
+        return "price = " + price + ", calorie = " + calorie;
     }
 
     @Override

@@ -74,24 +74,27 @@ public class ByteStreamBuilder {
                 MealType type = MealType.values()[index];
                 switch (type) {
                     case CAKE: {
-                        double price = stream.readDouble();
+                        int price = stream.readInt();
                         String shape = stream.readUTF();
                         String flavor = stream.readUTF();
-                        meal = new Cake(shape, flavor, price);
+                        int calorie = stream.readInt();
+                        meal = new Cake(shape, flavor, price, calorie);
                     }
                     break;
                     case DRINK: {
-                        double price = stream.readDouble();
+                        int price = stream.readInt();
                         String sort = stream.readUTF();
                         String additive = stream.readUTF();
-                        meal = new Drink(sort, additive, price);
+                        int calorie = stream.readInt();
+                        meal = new Drink(sort, additive, price, calorie);
                     }
                     break;
                     case PUFFPASTRY: {
-                        double price = stream.readDouble();
+                        int price = stream.readInt();
                         String kind = stream.readUTF();
                         String topping = stream.readUTF();
-                        meal = new PuffPastry(kind, topping, price);
+                        int calorie = stream.readInt();
+                        meal = new PuffPastry(kind, topping, price, calorie);
                     }
                     break;
                 }

@@ -31,8 +31,8 @@ public class Cake extends Meal implements Serializable {
 
     }
 
-    public Cake(String shape, String flavor, double price/*, double calorie*/) {
-        super(price/*, calorie*/);
+    public Cake(String shape, String flavor, double price, double calorie) {
+        super(price, calorie);
         this.shape = shape;
         this.flavor = flavor;
 

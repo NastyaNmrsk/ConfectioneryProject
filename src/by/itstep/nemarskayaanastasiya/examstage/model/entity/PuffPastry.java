@@ -6,14 +6,14 @@ import java.util.Objects;
 
 public class PuffPastry extends Meal {
     private String kind;
-    private String topping;//enum
+    private String topping;
 
     public PuffPastry() {
 
     }
 
-    public PuffPastry(String kind, String topping, double price/*, double calorie*/) {
-        super(price/*, calorie*/);
+    public PuffPastry(String kind, String topping, double price, double calorie) {
+        super(price, calorie);
         this.kind = kind;
         this.topping = topping;
 

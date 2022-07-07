@@ -10,6 +10,8 @@ import by.itstep.nemarskayaanastasiya.examstage.util.exceptions.OrderFileNotFoun
 
 import java.io.*;
 
+import static java.lang.Integer.parseInt;
+
 public class CharStreamBuilder {
     private String fileName;
 
@@ -65,24 +67,27 @@ public class CharStreamBuilder {
                 MealType type = MealType.valueOf(strings[0]);
                 switch (type) {
                     case CAKE: {
-                        double price = Double.parseDouble(strings[1]);
+                        int price = Integer.parseInt(strings[1]);
                         String shape = strings[2];
                         String flavor = strings[3];
-                        meal = new Cake(flavor, shape, price);
+                        int calorie = Integer.parseInt(strings[4]);
+                        meal = new Cake(flavor, shape, price, calorie);
                     }
                     break;
                     case DRINK: {
-                        double price = Double.parseDouble(strings[1]);
+                        int price = Integer.parseInt(strings[1]);
                         String sort = strings[2];
                         String additive = strings[3];
-                        meal = new Drink(sort, additive, price);
+                        int calorie = Integer.parseInt(strings[4]);
+                        meal = new Drink(sort, additive, price, calorie);
                     }
                     break;
                     case PUFFPASTRY: {
-                        double price = Double.parseDouble(strings[1]);
+                        int price = Integer.parseInt(strings[1]);
                         String kind = strings[2];
                         String topping = strings[3];
-                        meal = new PuffPastry(kind, topping, price);
+                        int calorie = Integer.parseInt(strings[4]);
+                        meal = new PuffPastry(kind, topping, price, calorie);
                     }
                     break;
                 }

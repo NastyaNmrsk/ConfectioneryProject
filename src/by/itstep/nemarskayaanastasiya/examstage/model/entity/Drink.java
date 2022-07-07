@@ -12,8 +12,8 @@ public class Drink extends Meal {
 
     }
 
-    public Drink(String sort, String additive, double price/*, double calorie*/) {
-        super(price/*, calorie*/);
+    public Drink(String sort, String additive, double price, double calorie) {
+        super(price, calorie);
         this.sort = sort;
         this.additive = additive;
 

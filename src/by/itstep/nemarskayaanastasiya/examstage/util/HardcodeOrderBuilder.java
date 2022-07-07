@@ -7,12 +7,12 @@ import by.itstep.nemarskayaanastasiya.examstage.model.entity.PuffPastry;
 
 public class HardcodeOrderBuilder {
     public static Order createOrder() {
-        Cake cake = new Cake("Cylinder", "Cheesecake", 11.0);
-        Cake cake1 = new Cake("Cube", "Honeycake", 12.0);
-        Drink drink = new Drink("Cocoa", "Marshmallow", 5.0);
-        Drink drink1 = new Drink("Tea", "Lemon", 4.5);
-        PuffPastry puffpastry = new PuffPastry("Croissant", "Chocolate", 6.0);
-        PuffPastry puffpastry1 = new PuffPastry("Croissant", "Salmon", 10.0);
+        Cake cake = new Cake("Cylinder", "Cheesecake", 11, 267);
+        Cake cake1 = new Cake("Cube", "Honeycake", 12, 251);
+        Drink drink = new Drink("Cocoa", "Marshmallow", 5, 100);
+        Drink drink1 = new Drink("Tea", "Lemon", 4, 10);
+        PuffPastry puffpastry = new PuffPastry("Croissant", "Chocolate", 6, 485);
+        PuffPastry puffpastry1 = new PuffPastry("Croissant", "Salmon", 10, 376);
 
         Order order = new Order();
         order.add(cake);
